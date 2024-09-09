@@ -1,10 +1,20 @@
 'use client';
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 
 import { useEffect, useState } from 'react';
 
 export default function Page() {
   const [items, setItems] = useState([]);
+  const router = useRouter();
+  const token = localStorage.getItem('token');
+
+  if(!token){
+    alert('not fount Token')
+    setTimeout( () => {
+      router.push('./signin')
+    }, 1000)
+  }
 
   async function Deleteuser(user_id){
     try {

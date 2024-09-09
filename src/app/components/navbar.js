@@ -41,9 +41,9 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-            <button className="btn btn-outline-primary" type="submit">
+            <Link className="btn btn-outline-primary" aria-current="page" href={'./signin'}>
               SignIn
-            </button>
+            </Link>
             <Link className="btn btn-outline-success" type="submit" href={'./signup'}>
               SignUp
             </Link>

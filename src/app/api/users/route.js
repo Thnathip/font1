@@ -51,30 +51,18 @@ export async function PUT(request) {
     if (res.rows.length === 0) {
     return new Response(JSON.stringify({ error: 'User not found' }), {
     status: 404,
-<<<<<<< HEAD
-    headers: { 'Content-Type': 'application/json' },
-=======
     headers: { 'Access-Control-Allow-Origin': '*','Content-Type': 'application/json' },
->>>>>>> 6ec9525d35835bfa80cb44f531c056c0c81daa18
     });
     }
     return new Response(JSON.stringify(res.rows[0]), {
     status: 200,
-<<<<<<< HEAD
-    headers: { 'Content-Type': 'application/json' },
-=======
     headers: {  'Access-Control-Allow-Origin': '*','Content-Type': 'application/json' },
->>>>>>> 6ec9525d35835bfa80cb44f531c056c0c81daa18
     });
     } catch (error) {
     console.error(error);
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
     status: 500,
-<<<<<<< HEAD
-    headers: { 'Content-Type': 'application/json' },
-=======
     headers: { 'Access-Control-Allow-Origin': '*','Content-Type': 'application/json' },
->>>>>>> 6ec9525d35835bfa80cb44f531c056c0c81daa18
     });
     }
     }
