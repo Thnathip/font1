@@ -1,97 +1,117 @@
-'use client';
-import Link from 'next/link'
-import { useRouter } from 'next/navigation';
+"use client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function Page() {
   const [items, setItems] = useState([]);
   const router = useRouter();
-  const token = localStorage.getItem('token');
+  let token;
 
-  if(!token){
-    alert('not fount Token')
-    setTimeout( () => {
-      router.push('./signin')
-    }, 1000)
+  if (typeof window !== "undefined") {
+    token = localStorage.getItem("token");
   }
 
-  async function Deleteuser(user_id){
+  if (typeof window !== "undefined") {
+    if (!token) {
+      window.alert("Token not found");
+      setTimeout(() => {
+        router.push("/signin");
+      }, 1000);
+    }
+  }
+
+  async function Deleteuser(user_id) {
     try {
-      const res = await fetch('http://localhost:3001/api/users',{
+      const res = await fetch("http://localhost:3001/api/users", {
         method: "DELETE",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id: user_id
-        })
-      })
+          id: user_id,
+        }),
+      });
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
 
   useEffect(() => {
     async function getUsers() {
       try {
-        const res = await fetch('http://localhost:3001/api/users');
+        const res = await fetch("http://localhost:3001/api/users");
         if (!res.ok) {
-          console.error('Failed to fetch data');
+          console.error("Failed to fetch data");
           return;
         }
         const data = await res.json();
         setItems(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     }
- 
-  getUsers()
-  const interval  = setInterval(getUsers, 1000);
-  return () => clearInterval(interval );
-}, []);
+
+    getUsers();
+    const interval = setInterval(getUsers, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
-
-    <br /><br /><br /><br />
-    <div className="container">
-      <div class="card">
-  <div class="card-header">
-    Users List
-  </div>
-  <div class="card-body">
-  <div className="row">
-      <table className="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th className='col-md-2 text-center'>#</th>
-            <th className='col-md-4'>Firstname</th>
-            <th className='col-md-4'>Lastname</th>
-            <th className='col-md-1'>Eidt</th>
-            <th className='col-md-1'>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((item) => (
-            <tr key={item.id}>
-              <td className='text-center'>{item.id}</td>
-              <td>{item.firstname}</td>
-              <td>{item.lastname}</td>
-              <td><Link href={`users/edit/${item.id}`} className="btn btn-warning">Edit</Link></td>
-              <td><Link href="#" className="btn btn-danger" onClick={() => Deleteuser(item.id)}>Del</Link></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    </div>
-
-    </div>
-    </div>
-    <br /><br />
-
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="container">
+        <div class="card">
+          <div class="card-header">Users List</div>
+          <div class="card-body">
+            <div className="row">
+              <table className="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th className="col-md-2 text-center">#</th>
+                    <th className="col-md-4">Firstname</th>
+                    <th className="col-md-4">Lastname</th>
+                    <th className="col-md-1">Eidt</th>
+                    <th className="col-md-1">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {items.map((item) => (
+                    <tr key={item.id}>
+                      <td className="text-center">{item.id}</td>
+                      <td>{item.firstname}</td>
+                      <td>{item.lastname}</td>
+                      <td>
+                        <Link
+                          href={`users/edit/${item.id}`}
+                          className="btn btn-warning"
+                        >
+                          Edit
+                        </Link>
+                      </td>
+                      <td>
+                        <Link
+                          href="#"
+                          className="btn btn-danger"
+                          onClick={() => Deleteuser(item.id)}
+                        >
+                          Del
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
     </>
   );
 }

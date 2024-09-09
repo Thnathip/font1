@@ -6,7 +6,7 @@ export default function Page() {
   const [username, setUserName] = useState("");
   const [password, setPassWord] = useState("");
   const [token, setToken] = useState("");
-  const router  = useRouter();
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,17 +23,24 @@ export default function Page() {
     setToken(result.token);
   };
 
+  if (typeof window !== "undefined") {
     localStorage.setItem("token", token);
 
+    const localtoken = localStorage.getItem("token");
 
-    const localtoken = localStorage.getItem('token');
-
-    if(localtoken){
-        router.push('./users')
+    if (localtoken) {
+      router.push("./users");
     }
 
-  console.log(token);
+    const localtokens = localStorage.getItem("token");
 
+    if (localtokens) {
+      router.push("./users");
+    }
+
+  }
+
+  console.log(token);
 
   return (
     <>
