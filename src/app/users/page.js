@@ -21,6 +21,7 @@ export default function Page() {
       }, 1000);
     }
   }
+  
 
   async function Deleteuser(user_id) {
     try {
