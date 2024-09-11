@@ -24,7 +24,7 @@ export default function Page() {
 
   async function Deleteuser(user_id) {
     try {
-      const res = await fetch("https://backend-pi-ten-83.vercel.app/api/users", {
+      const res = await fetch("https://back1-ten.vercel.app/api/users", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function Page() {
   useEffect(() => {
     async function getUsers() {
       try {
-        const res = await fetch("https://backend-pi-ten-83.vercel.app/api/users");
+        const res = await fetch("https://back1-ten.vercel.app/api/users");
         if (!res.ok) {
           console.error("Failed to fetch data");
           return;

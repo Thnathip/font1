@@ -8,38 +8,74 @@ export default function CardsPage() {
       <div className="row">
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/card1.png" className="card-img-top" width={1000} height={1000} alt="Card 1" />
+            <Image src="/gg.jpg" className="card-img-top" width={1000} height={1000} alt="Card 1" />
             <div className="card-body">
-              <h5 className="card-title">PRO EVOLUTION SOCCER 2020 PS4</h5>
+              <h5 className="card-title">Top scorer</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card s content.
+              Premier league.
               </p>
-              <a href="#" className="btn btn-primary">Buy</a>
+              <a href="#" className="btn btn-primary">Click</a>
             </div>
           </div>
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/card2.jpg" className="card-img-top" width={1000} height={1000} alt="Card 2" />
+            <Image src="/jo.jpg" className="card-img-top" width={1000} height={1000} alt="Card 2" />
             <div className="card-body">
               <h5 className="card-title">
-              SUPER VACATION PACK XVII PS4</h5>
+              Premier league table</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card s content.
+                 Table 2024
               </p>
-              <a href="#" className="btn btn-primary">Buy</a>
+              <a href="#" className="btn btn-primary">Click</a>
             </div>
           </div>
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/card3.jpg" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <Image src="/kok.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
             <div className="card-body">
-              <h5 className="card-title">MEGA MAN X LEGACY COLLECTION 1 MAS 2 PS4</h5>
+              <h5 className="card-title">Premier league hall of fame</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card s content.
+              Premier league hall of fame.2000
               </p>
-              <a href="#" className="btn btn-primary">Buy</a>
+              <a href="#" className="btn btn-primary">Click</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <Image src="/pra.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <div className="card-body">
+              <h5 className="card-title">Premier league </h5>
+              <p className="card-text">
+              Premier league 2000
+              </p>
+              <a href="#" className="btn btn-primary">Click</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <Image src="/co.jpg" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <div className="card-body">
+              <h5 className="card-title">FiFa infinity</h5>
+              <p className="card-text">
+             2000
+              </p>
+              <a href="#" className="btn btn-primary">Click</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <Image src="/ce.jpg" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <div className="card-body">
+              <h5 className="card-title">New Year</h5>
+              <p className="card-text">
+              
+              </p>
+              <a href="#" className="btn btn-primary">Click</a>
             </div>
           </div>
         </div>

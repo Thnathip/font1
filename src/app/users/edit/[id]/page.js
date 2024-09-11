@@ -12,7 +12,7 @@ export default function Page({ params }) {
     useEffect(() => {
         async function getUsers() {
             try {
-                const res = await fetch(`https://backend-pi-ten-83.vercel.app/api/users/${id}`);
+                const res = await fetch(`https://back1-ten.vercel.app/api/users/${id}`);
                 if (!res.ok) {
                     console.error('Failed to fetch data');
                     return;
@@ -33,7 +33,7 @@ export default function Page({ params }) {
     const handleUpdateSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`https://backend-pi-ten-83.vercel.app/api/users/${id}`, {
+            const res = await fetch(`https://back1-ten.vercel.app/api/users/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
