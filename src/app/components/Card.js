@@ -8,11 +8,11 @@ export default function CardsPage() {
       <div className="row">
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/gg.jpg" className="card-img-top" width={1000} height={1000} alt="Card 1" />
+            <Image src="/ad3.png" className="card-img-top" width={1000} height={1000} alt="Card 1" />
             <div className="card-body">
-              <h5 className="card-title">Top scorer</h5>
+              <h5 className="card-title">ADIDAS</h5>
               <p className="card-text">
-              Premier league.
+              SOON...
               </p>
               <a href="#" className="btn btn-primary">Click</a>
             </div>
@@ -20,12 +20,12 @@ export default function CardsPage() {
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/jo.jpg" className="card-img-top" width={1000} height={1000} alt="Card 2" />
+            <Image src="/aaa.png" className="card-img-top" width={1000} height={1000} alt="Card 2" />
             <div className="card-body">
               <h5 className="card-title">
-              Premier league table</h5>
+              NIKE</h5>
               <p className="card-text">
-                 Table 2024
+                 SOON...
               </p>
               <a href="#" className="btn btn-primary">Click</a>
             </div>
@@ -33,11 +33,11 @@ export default function CardsPage() {
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/kok.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <Image src="/pm2.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
             <div className="card-body">
-              <h5 className="card-title">Premier league hall of fame</h5>
+              <h5 className="card-title">PUMA</h5>
               <p className="card-text">
-              Premier league hall of fame.2000
+              SOON...
               </p>
               <a href="#" className="btn btn-primary">Click</a>
             </div>
@@ -45,11 +45,11 @@ export default function CardsPage() {
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/pra.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <Image src="/11.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
             <div className="card-body">
-              <h5 className="card-title">Premier league </h5>
+              <h5 className="card-title">NEW BALANCE</h5>
               <p className="card-text">
-              Premier league 2000
+              SOON...
               </p>
               <a href="#" className="btn btn-primary">Click</a>
             </div>
@@ -57,11 +57,11 @@ export default function CardsPage() {
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/co.jpg" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <Image src="/47.png" className="card-img-top" width={1000} height={1000} alt="Card 3" />
             <div className="card-body">
-              <h5 className="card-title">FiFa infinity</h5>
+              <h5 className="card-title">PAN</h5>
               <p className="card-text">
-             2000
+             SOON...
               </p>
               <a href="#" className="btn btn-primary">Click</a>
             </div>
@@ -69,10 +69,10 @@ export default function CardsPage() {
         </div>
         <div className="col-md-4 mb-4">
           <div className="card">
-            <Image src="/ce.jpg" className="card-img-top" width={1000} height={1000} alt="Card 3" />
+            <Image src="/20.jfif" className="card-img-top" width={1000} height={1000} alt="Card 3" />
             <div className="card-body">
-              <h5 className="card-title">New Year</h5>
-              <p className="card-text">
+              <h5 className="card-title">WINGZ</h5>
+              <p className="card-text">SOON...
               
               </p>
               <a href="#" className="btn btn-primary">Click</a>

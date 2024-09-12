@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Slider1 from "../../../public/wp.jpg"
-import Slider2 from "../../../public/78.jpg"
-import Slider3 from "../../../public/ner.jpg"
+import Slider1 from "../../../public/aq.jpg"
+import Slider2 from "../../../public/a2.jpg"
+import Slider3 from "../../../public/ru.jpg"
 export default function Carousel() {
 return (
         <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
